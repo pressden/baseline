@@ -1,0 +1,29 @@
+{
+  "name": "baseline",
+  "version": "1.0.0",
+  "description": "Baseline uses npm, webpack and SASS to speed up child theme development for WordPress and the Genesis framework.",
+  "homepage": "https://github.com/pressden/baseline",
+  "license": "GPL-3.0",
+  "author": "D.S. Webster",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pressden/baseline"
+  },
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "bourbon-neat": "^3.0.1",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
