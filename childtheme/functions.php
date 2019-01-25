@@ -3,7 +3,7 @@ define( 'CHILD_THEME_NAME', 'Child Theme' );
 define( 'CHILD_THEME_URL', 'https://github.com/pressden/baseline' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
-require_once( 'baseline/assets/php/baseline.php');
+require_once( 'baseline/lib/baseline.php');
 
 /**********************************
  * BEGIN THEME FUNCTIONS
