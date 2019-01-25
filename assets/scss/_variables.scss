@@ -1,23 +1,14 @@
 // Typography
-// Native Font Stack (Reboot: https://getbootstrap.com/docs/4.0/content/reboot/#native-font-stack)
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
-$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-size-base:              1rem !default;
+$h1-font-size:                $font-size-base * 2.25 !default;
+$h2-font-size:                $font-size-base * 1.875 !default;
+$h3-font-size:                $font-size-base * 1.625 !default;
+$h4-font-size:                $font-size-base * 1.375 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base * 1.125 !default;
 
 $body-font-weight: lighter !default;
 $headline-font-weight: normal !default;
 
-$h1-font-size: 2.25rem !default;
-$h2-font-size: 1.875rem !default;
-$h3-font-size: 1.625rem !default;
-$h4-font-size: 1.375rem !default;
-$h5-font-size: 1.25rem !default;
-$h6-font-size: 1.125rem !default;
-
 // Layout
 $layout-max-width: 1140px !default;
-
-// Grid
-$contend-sidebar-grid: (
-  columns: 3,
-  gutter: 1rem,
-);

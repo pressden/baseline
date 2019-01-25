@@ -26,8 +26,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  "node_modules/normalize.css/",
-                  require("bourbon-neat").includePaths
+                  "node_modules/bootstrap/scss",
                 ]
               }
             }
