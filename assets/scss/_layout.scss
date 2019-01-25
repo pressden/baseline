@@ -1,0 +1,32 @@
+.site-header {
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .title-area {
+
+  }
+
+  .widget-area {
+
+  }
+}
+
+.content-sidebar-wrap {
+  display: flex;
+  margin: 0 auto;
+  max-width: $layout-max-width;
+
+  .content {
+    flex: 3;
+    margin-left: -1rem;
+    margin-right: .5rem;
+  }
+
+  .sidebar {
+    flex: 1;
+    margin-left: .5rem;
+    margin-right: -1rem;
+  }
+}

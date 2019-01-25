@@ -1,0 +1,17 @@
+.site-title {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: $headline-font-weight;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.site-description {
+  margin: 0;
+}

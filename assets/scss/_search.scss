@@ -1,0 +1,41 @@
+.search-form {
+	//overflow: hidden;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: .25rem;
+    left: 1rem;
+    content: "\f179";
+    font-size: 1.25rem;
+	  font-family: "dashicons";
+  }
+
+  input {
+    &[type="search"] {
+      padding: .5rem .5rem .5rem 3rem;
+    }
+  }
+}
+
+.entry-content {
+  .search-form {
+    margin-bottom: 1rem;
+    width: 50%;
+  }
+}
+
+.widget_search {
+  input {
+    &[type="submit"] {
+      margin: -1px;
+	    padding: 0;
+      position: absolute;
+      top: 0;
+	    right: 0;
+      width: 1px;
+      height: 1px;
+      clip: rect(0, 0, 0, 0);
+    }
+  }
+}
