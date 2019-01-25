@@ -17,7 +17,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.(sa|sc|c)ss$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -34,11 +34,10 @@ module.exports = {
         })
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
+        test: /\.(jpg|jpeg|png|gif|svg|woff|woff2|eot|ttf)$/,
+        use: [
+          'url-loader',
+        ]
       }
     ]
   },
