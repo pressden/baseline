@@ -14,7 +14,6 @@
     "watch": "webpack --watch"
   },
   "dependencies": {
-    "bourbon-neat": "^3.0.1",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
