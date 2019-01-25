@@ -6,14 +6,15 @@
     position: absolute;
     top: .25rem;
     left: 1rem;
-    content: "\f179";
-    font-size: 1.25rem;
-	  font-family: "dashicons";
+    content: "search";
+    font-size: 1.5rem;
+	  font-family: "Material Icons";
   }
 
   input {
     &[type="search"] {
       padding: .5rem .5rem .5rem 3rem;
+      border: 1px solid;
     }
   }
 }
