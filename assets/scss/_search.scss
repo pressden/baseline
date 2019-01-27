@@ -5,16 +5,18 @@
   &:before {
     position: absolute;
     top: .25rem;
-    left: 1rem;
+    left: .5rem;
     content: "search";
-    font-size: 1.5rem;
-	  font-family: "Material Icons";
+    font-size: 1.4rem;
+    font-family: "Material Icons";
+    color: #ccc;
   }
 
   input {
     &[type="search"] {
-      padding: .5rem .5rem .5rem 3rem;
-      border: 1px solid;
+      padding: .5rem .5rem .5rem 2rem;
+      border: 1px solid #ccc;
+      font-size: .9rem;
     }
   }
 }
