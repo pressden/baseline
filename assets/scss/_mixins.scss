@@ -1,5 +1,4 @@
-.wrap {
+@mixin site-container() {
   margin: 0 auto;
-  padding: 0 1rem;
   max-width: $layout-max-width;
 }

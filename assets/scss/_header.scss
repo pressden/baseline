@@ -1,4 +1,12 @@
 .site-header {
   padding: 2rem 0;
   background-color: #f8f9fa;
+
+  & > .wrap {
+    @include site-container();
+  }
+}
+
+.title-area {
+  padding: 0 1rem;
 }

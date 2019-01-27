@@ -1,14 +1,8 @@
 .nav-primary {
   background-color: #e9ecef;
 
-  .wrap {
-    padding: .5rem 0;
-  }
-}
-
-.nav-secondary {
-  .wrap {
-    padding: .5rem 0;
+  & > .wrap {
+    @include site-container();
   }
 }
 

@@ -1,10 +1,10 @@
 @import "variables";
+@import "mixins";
 @import "bootstrap-reboot"; // imports 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
 @import "accessibility";
 @import "typography";
 @import "common";
 @import "material-icons";
-@import "containers";
 @import "layout";
 @import "header";
 @import "nav";

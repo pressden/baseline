@@ -2,6 +2,11 @@
   padding: 2rem 0;
   background-color: #f8f9fa;
 
+  & > .wrap {
+    @include site-container();
+    padding: 0 1rem;
+  }
+
   p {
     margin-bottom: 0;
   }
