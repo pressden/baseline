@@ -1,25 +1,43 @@
 .site-header {
+  border-top: 3px solid transparent;
+
+  @include media-breakpoint-up(sm) {
+    border-color: #990000;
+  }
+
+  @include media-breakpoint-up(md) {
+    border-color: #ffae00;
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-color: #c6c600;
+  }
+
+  @include media-breakpoint-up(xl) {
+    border-color: #009900;
+  }
+
   .wrap {
     display: flex;
     justify-content: space-between;
-  }
 
-  .title-area {
-
-  }
-
-  .widget-area {
-
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
   }
 }
 
 .content-sidebar-wrap {
   display: flex;
-  margin: 0 auto;
+  margin: 2rem auto;
   max-width: $layout-max-width;
 
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+
   .content {
-    flex: 3;
+    flex: 2;
     margin-right: .5rem;
   }
 
