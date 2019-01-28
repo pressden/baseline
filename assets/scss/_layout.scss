@@ -5,7 +5,7 @@
   max-width: $layout-max-width;
 
   .content {
-    flex: 3;
+    flex: 2;
   }
 
   .sidebar-primary {
@@ -19,7 +19,7 @@
 
 .content-sidebar {
   .content-sidebar-wrap {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       display: flex;
     }
   }
@@ -27,7 +27,7 @@
 
 .sidebar-content {
   .content-sidebar-wrap {
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       display: flex;
     }
   }
