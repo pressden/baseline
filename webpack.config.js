@@ -35,27 +35,19 @@ module.exports = {
       },
       {
         test: /\.(jpg|jpeg|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: '/images/'
-            }
-          }
-        ]
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'images'
+        }
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: '/fonts/'
-            }
-          }
-        ]
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts'
+        }
       }
     ]
   },
