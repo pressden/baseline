@@ -3,7 +3,14 @@
   background-color: #f8f9fa;
 
   & > .wrap {
+    display: flex;
+    justify-content: space-between;
+
     @include site-container();
+
+    @include media-breakpoint-down(sm) {
+      display: block;
+    }
   }
 }
 
