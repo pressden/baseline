@@ -1,1 +1,4 @@
 // begin custom styles
+@import "../baseline/assets/scss/variables";        // default variables for Baseline
+@import "variables";                                // theme overrides for Baseline variables
+@import "../baseline/assets/scss/baseline";         // default Baseline styles
