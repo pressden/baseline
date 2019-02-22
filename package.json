@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.2.1",
-    "material-design-icons": "^3.0.1",
     "url-loader": "^1.1.2"
   }
 }
