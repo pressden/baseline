@@ -8,11 +8,11 @@ module.exports = {
 		jquery: 'jQuery',
 	},
   entry: {
-    main: '../webpack.js'
+    main: '../js/webpack.js'
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../')
+    path: path.resolve(__dirname, '../js/')
   },
   module: {
     rules: [
@@ -46,13 +46,13 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          outputPath: 'fonts'
+          outputPath: '../fonts'
         }
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('../style.css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
