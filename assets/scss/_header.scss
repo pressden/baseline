@@ -1,15 +1,39 @@
 .site-header {
-  padding: 2rem 0;
-  background-color: #f8f9fa;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 25px 0;
+  background-color: rgba(248, 249, 250, .95);
+  z-index: 9999;
+  transition: all 0.2s ease-in-out;
 
   & > .wrap {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: 100px;
 
     @include site-container();
 
     @include media-breakpoint-down(sm) {
       display: block;
+    }
+  }
+}
+
+.admin-bar {
+  .site-header {
+    top: 32px;
+  }
+}
+
+.shrink {
+  .site-header {
+    padding: 10px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+
+    & > .wrap {
+      min-height: 75px;
     }
   }
 }
