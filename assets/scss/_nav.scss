@@ -1,8 +1,30 @@
 .nav-primary {
-  background-color: #e9ecef;
+  position: absolute;
+  right: 0;
+  bottom: .75rem;
+}
 
-  & > .wrap {
+.nav-secondary {
+  margin-left: calc(-50vw + 100% / 2);
+  margin-right: calc(-50vw + 100% / 2);
+  background-color: rgba(51, 51, 51, .8);
+
+  .genesis-nav-menu {
+    display: flex;
+    justify-content: flex-end;
+
     @include site-container();
+  }
+
+  a {
+    padding-top: 9px;
+    padding-bottom: 7px;
+    color: #efefef;
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }
 
@@ -20,3 +42,76 @@
     text-decoration: none;
   }
 }
+
+
+/* Site Navigation
+---------------------------------------------------------------------------- */
+/*
+.genesis-nav-menu {
+	clear: both;
+	line-height: 1;
+	width: 100%;
+}
+*/
+
+/*
+.genesis-nav-menu .menu-item {
+	display: block;
+	float: none;
+	position: relative;
+}
+*/
+
+/*
+.genesis-nav-menu a:focus,
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+	color: #008080;
+	text-decoration: none;
+}
+*/
+
+/*
+.genesis-nav-menu .sub-menu,
+.genesis-nav-menu .sub-menu a {
+	width: 100%;
+}
+*/
+
+/*
+.genesis-nav-menu .sub-menu {
+	clear: both;
+	display: none;
+	left: -9999px;
+	margin: 0;
+	opacity: 1;
+	padding-left: 15px;
+	position: static;
+	z-index: 99;
+}
+*/
+
+/*
+.genesis-nav-menu .sub-menu a {
+	background-color: #fff;
+	position: relative;
+	word-wrap: break-word;
+}
+*/
+
+/*
+.genesis-nav-menu .menu-item:focus,
+.genesis-nav-menu .menu-item:hover {
+	position: relative;
+}
+*/
+
+/*
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+	display: block;
+	left: auto;
+	opacity: 1;
+}
+*/

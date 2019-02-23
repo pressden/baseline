@@ -1,5 +1,5 @@
 <?php
 return array(
 	'primary'   => __( 'Primary', 'childtheme' ),
-	'secondary' => __( 'Secondary', 'childtheme' ),
+	'secondary' => __( 'Utility', 'childtheme' ),
 );

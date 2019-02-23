@@ -2,16 +2,12 @@
   width: 100%;
   position: fixed;
   top: 0;
-  padding: 25px 0;
   background-color: rgba(248, 249, 250, .95);
   z-index: 9999;
-  transition: all 0.2s ease-in-out;
 
   & > .wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100px;
+    width: 100%;
+    position: relative;
 
     @include site-container();
 
@@ -19,6 +15,12 @@
       display: block;
     }
   }
+}
+
+.title-area {
+  display: inline-block;
+  padding: 1rem 1rem 1.5rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .admin-bar {
@@ -29,15 +31,15 @@
 
 .shrink {
   .site-header {
-    padding: 10px 0;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 
-    & > .wrap {
-      min-height: 75px;
+    .title-area {
+      padding-top: .1rem;
+      padding-bottom: .25rem;
+    }
+
+    .site-description {
+      display: none;
     }
   }
-}
-
-.title-area {
-  padding: 0 1rem;
 }
