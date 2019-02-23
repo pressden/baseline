@@ -31,7 +31,6 @@
   flex: 0 0 100vw;
 
   .menu {
-    display: flex;
     justify-content: flex-end;
 
     @include site-container();
