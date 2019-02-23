@@ -16,9 +16,7 @@
 }
 
 .nav-primary {
-  position: absolute;
-  right: 0;
-  bottom: 2rem;
+  margin-bottom: 2rem;
   transition: all 0.2s ease-in-out;
 
   a {
@@ -30,6 +28,7 @@
   margin-left: calc(-50vw + 100% / 2);
   margin-right: calc(-50vw + 100% / 2);
   background-color: rgba(0, 0, 0, .75);
+  flex: 0 0 100vw;
 
   .menu {
     display: flex;
@@ -47,7 +46,7 @@
 
 .shrink {
   .nav-primary {
-    bottom: .75rem;
+    margin-bottom: .75rem;
   }
 }
 
