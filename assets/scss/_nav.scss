@@ -1,33 +1,3 @@
-.nav-primary {
-  position: absolute;
-  right: 0;
-  bottom: .75rem;
-}
-
-.nav-secondary {
-  margin-left: calc(-50vw + 100% / 2);
-  margin-right: calc(-50vw + 100% / 2);
-  background-color: rgba(51, 51, 51, .8);
-
-  .genesis-nav-menu {
-    display: flex;
-    justify-content: flex-end;
-
-    @include site-container();
-  }
-
-  a {
-    padding-top: 9px;
-    padding-bottom: 7px;
-    color: #efefef;
-    display: block;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-}
-
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -38,8 +8,46 @@
   a {
     display: block;
     padding: .5rem 1rem;
+    color: #333;
     text-align: center;
     text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+}
+
+.nav-primary {
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+  transition: all 0.2s ease-in-out;
+
+  a {
+    font-size: 1.1rem;
+  }
+}
+
+.nav-secondary {
+  margin-left: calc(-50vw + 100% / 2);
+  margin-right: calc(-50vw + 100% / 2);
+  background-color: rgba(0, 0, 0, .75);
+
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+
+    @include site-container();
+  }
+
+  a {
+    color: #efefef;
+    font-size: .8rem;
+    text-transform: uppercase;
+  }
+}
+
+.shrink {
+  .nav-primary {
+    bottom: .75rem;
   }
 }
 
