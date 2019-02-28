@@ -1,18 +1,6 @@
 <?php
 // ACTIONS
 
-// Enqueues scripts and styles.
-add_action( 'wp_enqueue_scripts', 'childtheme_enqueue_scripts_styles' );
-function childtheme_enqueue_scripts_styles() {
-  wp_enqueue_script(
-		'childtheme-main',
-		get_stylesheet_directory_uri() . '/js/main.js',
-		array( 'jquery' ),
-		CHILD_THEME_VERSION,
-		true
-	);
-}
-
 // Displays custom logo.
 add_action( 'genesis_site_title', 'the_custom_logo', 0 );
 
