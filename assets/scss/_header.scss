@@ -5,6 +5,14 @@
   background-color: rgba(248, 249, 250, .95);
   z-index: 9999;
 
+  .admin-bar & {
+    top: 32px;
+  }
+
+  .shrink & {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+
   & > .wrap {
     width: 100%;
     display: flex;
@@ -25,28 +33,26 @@
   padding: 2rem 1rem 2.5rem;
   transition: all 0.2s ease-in-out;
 
+  .shrink & {
+    padding-top: .1rem;
+    padding-bottom: .25rem;
+  }
+
+  .has-split-menu & {
+    text-align: center;
+  }
+
+  .has-left-menu & {
+    text-aslign: right;
+  }
+
   a {
     color: #333;
   }
 }
 
-.admin-bar {
-  .site-header {
-    top: 32px;
-  }
-}
-
 .shrink {
-  .site-header {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-
-    .title-area {
-      padding-top: .1rem;
-      padding-bottom: .25rem;
-    }
-
-    .site-description {
-      display: none;
-    }
+  .site-description {
+    display: none;
   }
 }
