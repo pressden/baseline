@@ -2,3 +2,13 @@
   margin: 0 auto;
   max-width: $layout-max-width;
 }
+
+@mixin active-menu-anchor() {
+  @include active-anchor();
+	text-decoration: none;
+}
+
+@mixin active-anchor() {
+  //@TODO: Variable
+  color: #008080;
+}
