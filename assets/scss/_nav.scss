@@ -1,36 +1,305 @@
-.menu {
-  display: flex;
-  flex-wrap: wrap;
+// @TODO: Consolidate transitions into a mixin
+// @TODO: Remove floats infavor of flexbox
+// @TODO: Reivew styles for removeables
+// @TODO: Determine why placement of header menus stopped working
+.genesis-nav-menu {
+  display: block;
   margin: 0;
   padding: 0;
+  line-height: 1;
   list-style-type: none;
 
+  /*
+  display: flex;
+  flex-wrap: wrap;
+	clear: both;
+  width: 100%;
+  */
+
   a {
+    padding-top: 13px;
+    padding-bottom: 11px;
     display: block;
-    padding: .5rem 1rem;
+    // @TODO: Variable
     color: #333;
-    text-align: center;
+    outline-offset: -1px;
     text-decoration: none;
     letter-spacing: 0.5px;
+    // @TODO: Bring back `text-align: center` when flexbox is working properly
+    //text-align: center;
+
+    &:hover,
+    &:focus {
+      @include active-menu-anchor();
+    }
+  }
+
+  .current-menu-item {
+    > a {
+      @include active-menu-anchor();
+    }
+  }
+
+  .sub-menu {
+    width: 100%;
+    clear: both;
+    display: none;
+    left: -9999px;
+    margin: 0;
+    opacity: 1;
+    padding-left: 15px;
+    position: static;
+    z-index: 99;
+
+    @include media-breakpoint-up($menu_toggle_breakpoint) {
+      width: $menu_submenu_width;
+      border-top: 1px solid #eee;
+		  opacity: 0;
+		  padding-left: 0;
+		  position: absolute;
+		  transition: opacity 0.2s ease-in-out;
+    }
+
+    a {
+      width: 100%;
+      background-color: #fff;
+      position: relative;
+      word-wrap: break-word;
+      // @TODO: Bring back `text-align: left` only if we bring back centering on the main menu anchors
+      //text-align: left;
+
+      /*
+      padding-bottom: .875rem;
+      padding-top: .875rem;
+      font-size: .9rem;
+      */
+
+      @include media-breakpoint-up($menu_toggle_breakpoint) {
+        // @TODO: Width is 100% and container is reduced at this breakpoint. Does the anchor width need to be manually reduced as well?
+        width: $menu_submenu_width;
+        border: 1px solid #eee;
+		    border-top: 0;
+		    padding-bottom: 15px;
+		    padding-top: 15px;
+      }
+    }
+
+    .current-menu-item {
+      > a {
+        &:focus,
+        &:hover {
+          @include active-menu-anchor();
+        }
+      }
+    }
+
+    .sub-menu-toggle {
+      padding: 12px 10px;
+    }
+
+    .sub-menu {
+      @include media-breakpoint-up($menu_toggle_breakpoint) {
+        margin: -44px 0 0 179px;
+      }
+    }
+  }
+
+  .menu-item {
+    display: block;
+    float: none;
+    position: relative;
+
+    @include media-breakpoint-up($menu_toggle_breakpoint) {
+      display: inline-block;
+    }
+
+    &:focus,
+    &:hover {
+      position: relative;
+    }
+
+    &:hover {
+      > .sub-menu {
+        display: block;
+        left: auto;
+        opacity: 1;
+
+        .genesis-responsive-menu & {
+          display: none;
+        }
+      }
+    }
   }
 }
 
-.nav-primary {
+.menu {
+  .menu-item {
+    &:focus {
+      position: static;
+    }
+
+    &:focus + ul.sub-menu,
+    &.sfHover > ul.sub-menu {
+      left: auto;
+	    opacity: 1;
+    }
+  }
+}
+
+.genesis-responsive-menu {
+	display: none;
+  position: relative;
+
+  @include media-breakpoint-up($menu_toggle_breakpoint) {
+    display: block;
+  }
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+	background-color: transparent;
+	border-width: 0;
+	color: #000;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+  visibility: visible;
+
+  @include media-breakpoint-up($menu_toggle_breakpoint) {
+    display: none;
+    visibility: hidden;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: transparent;
+	  border-width: 0;
+    box-shadow: none;
+    // @TODO: Mixin or Variable
+	  color: #008080;
+  }
+}
+
+.menu-toggle {
+	float: right;
+	line-height: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 15px 0;
+	position: relative;
+  z-index: 1000;
+
+  &.activated {
+    &::before {
+      content: "\f335";
+    }
+  }
+}
+
+// @TODO: Figure out why this is wrapped in .site-header instead of existing at the root level like the .menu-toggle definition above it
+.site-header {
+  .menu-toggle {
+    &::before {
+      float: left;
+	    margin-right: 5px;
+	    position: relative;
+	    text-rendering: auto;
+	    top: 1px;
+    }
+  }
+}
+
+.sub-menu-toggle {
+	float: right;
+	padding: 9px 10px;
+	position: absolute;
+	right: 0;
+	top: 0;
+  z-index: 100;
+
+  &::before {
+    display: inline-block;
+    text-rendering: auto;
+    transform: rotate(0);
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &.activated {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.nav-primary,
+.nav-secondary {
+  width: 100%;
+  // @TODO: Delete margin-bottom if we end up not needing it
   margin-bottom: 2rem;
   transition: all 0.2s ease-in-out;
+
+  @include media-breakpoint-up($menu_toggle_breakpoint) {
+    float: left;
+    width: 40%;
+
+    .genesis-nav-menu {
+      a {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .shrink & {
+    margin-bottom: .75rem;
+  }
 
   a {
     font-size: 1.1rem;
   }
+
+  .wp-custom-logo & {
+    @include media-breakpoint-up($menu_toggle_breakpoint) {
+      margin-top: 12px;
+		  margin-bottom: 12px;
+      width: calc((100% / 2) - 122px);
+    }
+  }
+
+  // @TODO: Replace .has-one-menu with one of the new descriptive classes OR remove these styles in favor of the flexbox based solution.
+  /*
+  .has-one-menu &,
+  .wp-custom-logo.has-one-menu & {
+    @include media-breakpoint-up($menu_toggle_breakpoint) {
+      width: 70%;
+    }
+  }
+  */
 }
 
+.nav-secondary {
+  @include media-breakpoint-up($menu_toggle_breakpoint) {
+    float: right;
+    text-align: right;
+  }
+
+  .menu-item {
+    @include media-breakpoint-up($menu_toggle_breakpoint) {
+      text-align: left;
+    }
+	}
+}
+
+/*
+// @TODO: Reuse these styles on whatever menu becomes the "utliity" menu
 .nav-secondary {
   margin-left: calc(-50vw + 100% / 2);
   margin-right: calc(-50vw + 100% / 2);
   background-color: rgba(0, 0, 0, .75);
   flex: 0 0 100vw;
 
-  .menu {
+  .genesis-nav-menu {
     justify-content: flex-end;
 
     @include site-container();
@@ -41,83 +310,5 @@
     font-size: .8rem;
     text-transform: uppercase;
   }
-}
-
-.shrink {
-  .nav-primary {
-    margin-bottom: .75rem;
-  }
-}
-
-
-/* Site Navigation
----------------------------------------------------------------------------- */
-/*
-.genesis-nav-menu {
-	clear: both;
-	line-height: 1;
-	width: 100%;
-}
-*/
-
-/*
-.genesis-nav-menu .menu-item {
-	display: block;
-	float: none;
-	position: relative;
-}
-*/
-
-/*
-.genesis-nav-menu a:focus,
-.genesis-nav-menu a:hover,
-.genesis-nav-menu .current-menu-item > a,
-.genesis-nav-menu .sub-menu .current-menu-item > a:focus,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #008080;
-	text-decoration: none;
-}
-*/
-
-/*
-.genesis-nav-menu .sub-menu,
-.genesis-nav-menu .sub-menu a {
-	width: 100%;
-}
-*/
-
-/*
-.genesis-nav-menu .sub-menu {
-	clear: both;
-	display: none;
-	left: -9999px;
-	margin: 0;
-	opacity: 1;
-	padding-left: 15px;
-	position: static;
-	z-index: 99;
-}
-*/
-
-/*
-.genesis-nav-menu .sub-menu a {
-	background-color: #fff;
-	position: relative;
-	word-wrap: break-word;
-}
-*/
-
-/*
-.genesis-nav-menu .menu-item:focus,
-.genesis-nav-menu .menu-item:hover {
-	position: relative;
-}
-*/
-
-/*
-.genesis-nav-menu .menu-item:hover > .sub-menu {
-	display: block;
-	left: auto;
-	opacity: 1;
 }
 */
