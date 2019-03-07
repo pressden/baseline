@@ -13,7 +13,7 @@ remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_header', 'genesis_do_subnav', 12 );
 
 // Add the utility menu
-add_action( 'genesis_header', 'childtheme_do_utility_menu', 5 );
+add_action( 'genesis_header', 'childtheme_do_utility_menu', 4 );
 function childtheme_do_utility_menu() {
   $class = 'menu genesis-nav-menu menu-utility';
   if ( genesis_superfish_enabled() ) {
@@ -27,7 +27,7 @@ function childtheme_do_utility_menu() {
 }
 
 // Add the main menu
-add_action( 'genesis_header', 'childtheme_do_main_menu', 5 );
+add_action( 'genesis_header', 'childtheme_do_main_menu', 13 );
 function childtheme_do_main_menu() {
   $class = 'menu genesis-nav-menu menu-main';
   if ( genesis_superfish_enabled() ) {
