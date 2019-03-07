@@ -1,5 +1,4 @@
 // @TODO: Consolidate transitions into a mixin
-// @TODO: Remove floats infavor of flexbox
 // @TODO: Reivew styles for removeables
 // @TODO: Determine why placement of header menus stopped working
 .genesis-nav-menu {
@@ -9,12 +8,10 @@
   line-height: 1;
   list-style-type: none;
 
-  /*
-  display: flex;
-  flex-wrap: wrap;
-	clear: both;
-  width: 100%;
-  */
+  @include media-breakpoint-up($menu_toggle_breakpoint) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   a {
     padding-top: 13px;
@@ -106,7 +103,6 @@
 
   .menu-item {
     display: block;
-    float: none;
     position: relative;
 
     @include media-breakpoint-up($menu_toggle_breakpoint) {
@@ -182,13 +178,15 @@
 }
 
 .menu-toggle {
-	float: right;
 	line-height: 20px;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	padding: 15px 0;
+	padding: 10px 0;
 	position: relative;
   z-index: 1000;
+
+  &::before {
+    margin-right: 5px;
+    top: 1px;
+  }
 
   &.activated {
     &::before {
@@ -197,21 +195,7 @@
   }
 }
 
-// @TODO: Figure out why this is wrapped in .site-header instead of existing at the root level like the .menu-toggle definition above it
-.site-header {
-  .menu-toggle {
-    &::before {
-      float: left;
-	    margin-right: 5px;
-	    position: relative;
-	    text-rendering: auto;
-	    top: 1px;
-    }
-  }
-}
-
 .sub-menu-toggle {
-	float: right;
 	padding: 9px 10px;
 	position: absolute;
 	right: 0;
@@ -234,15 +218,11 @@
 
 .nav-primary,
 .nav-secondary {
-  width: 100%;
   // @TODO: Delete margin-bottom if we end up not needing it
   margin-bottom: 2rem;
   transition: all 0.2s ease-in-out;
 
   @include media-breakpoint-up($menu_toggle_breakpoint) {
-    float: left;
-    width: 40%;
-
     .genesis-nav-menu {
       a {
         padding-left: 10px;
@@ -280,7 +260,6 @@
 
 .nav-secondary {
   @include media-breakpoint-up($menu_toggle_breakpoint) {
-    float: right;
     text-align: right;
   }
 
@@ -291,9 +270,9 @@
 	}
 }
 
-/*
+
 // @TODO: Reuse these styles on whatever menu becomes the "utliity" menu
-.nav-secondary {
+.nav-utility {
   margin-left: calc(-50vw + 100% / 2);
   margin-right: calc(-50vw + 100% / 2);
   background-color: rgba(0, 0, 0, .75);
@@ -311,4 +290,3 @@
     text-transform: uppercase;
   }
 }
-*/
