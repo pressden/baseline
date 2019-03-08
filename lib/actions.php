@@ -21,8 +21,8 @@ function childtheme_do_utility_menu() {
   }
 
   genesis_nav_menu( array(
-    'theme_location' => 'utility',
-    'menu_class'     => $class,
+    'theme_location'  => 'utility',
+    'menu_class'      => $class,
   ) );
 }
 
@@ -35,8 +35,8 @@ function childtheme_do_main_menu() {
   }
 
   genesis_nav_menu( array(
-    'theme_location' => 'main',
-    'menu_class'     => $class,
+    'theme_location'  => 'main',
+    'menu_class'      => $class,
   ) );
 }
 
@@ -44,12 +44,10 @@ function childtheme_do_main_menu() {
 add_action( 'genesis_footer', 'childtheme_do_footer_menu', 5 );
 function childtheme_do_footer_menu() {
   $class = 'menu genesis-nav-menu menu-footer';
-  if ( genesis_superfish_enabled() ) {
-    $class .= ' js-superfish';
-  }
 
   genesis_nav_menu( array(
-    'theme_location' => 'footer',
-    'menu_class'     => $class,
+    'theme_location'  => 'footer',
+    'menu_class'      => $class,
+    'depth'           => 1,
   ) );
 }
