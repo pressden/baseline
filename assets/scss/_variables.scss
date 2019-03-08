@@ -1,25 +1,37 @@
 // Typography
-$font-size-base:              1rem !default;
-$h1-font-size:                $font-size-base * 2.25 !default;
-$h2-font-size:                $font-size-base * 1.875 !default;
-$h3-font-size:                $font-size-base * 1.625 !default;
-$h4-font-size:                $font-size-base * 1.375 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base * 1.125 !default;
+$font-size-base:                  1rem !default;
+$h1-font-size:                    $font-size-base * 2.25 !default;
+$h2-font-size:                    $font-size-base * 1.875 !default;
+$h3-font-size:                    $font-size-base * 1.625 !default;
+$h4-font-size:                    $font-size-base * 1.375 !default;
+$h5-font-size:                    $font-size-base * 1.25 !default;
+$h6-font-size:                    $font-size-base * 1.125 !default;
 
-$body-font-weight:            lighter !default;
-$headline-font-weight:        normal !default;
+$body-font-weight:                lighter !default;
+$headline-font-weight:            normal !default;
 
 // Header
-$header-full-height:          100px !default;
-$header-reduced-height:       75px !default;
+$header-full-height:              100px !default;
+$header-reduced-height:           75px !default;
+$header-background-color:         #fff !default;
 
-// Menu
-$menu_toggle_breakpoint:      md !default;
-$menu_submenu_width:          180px !default;
+// Menu (variables for all menus)
+$menu-toggle-breakpoint:          md !default;
+$menu-submenu-width:              180px !default;
+$menu-link-color:                 #333 !default;
+$menu-link-color-active:          #00b9eb !default;
+
+// Utility Menu
+$utility-menu-background-color:   #23282d !default;
+$utility-menu-link-color:         #fff !default;
+
+// Main Menu
+$main-menu-justify-content:       space-between !default;
+$main-menu-background-color:      #efefef !default;
+$main-menu-link-color:            $menu-link-color !default;
 
 // Layout
-$layout-max-width:            1200px !default;
+$layout-max-width:                1200px !default;
 
 // Grid
 $grid-breakpoints: (
@@ -29,3 +41,8 @@ $grid-breakpoints: (
   lg: 1024px,
   xl: 1200px
 ) !default;
+
+// Transition
+$transition-duration:             0.2s !default;
+$transition-timing:               ease-in-out !default;
+$transition-defaults:             $transition-duration $transition-timing !default;

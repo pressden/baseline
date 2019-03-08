@@ -9,6 +9,5 @@
 }
 
 @mixin active-anchor() {
-  //@TODO: Variable
-  color: #008080;
+  color: $menu-link-color-active;
 }

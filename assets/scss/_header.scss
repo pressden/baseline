@@ -1,8 +1,8 @@
 .site-header {
   width: 100%;
-  background-color: rgba(248, 249, 250, .95);
+  background-color: $header_background_color;
 
-  @include media-breakpoint-up($menu_toggle_breakpoint) {
+  @include media-breakpoint-up($menu-toggle-breakpoint) {
     position: fixed;
     top: 0;
     z-index: 9999;
@@ -37,7 +37,7 @@
   transition: all 0.2s ease-in-out;
   width: 100%;
 
-  @include media-breakpoint-up($menu_toggle_breakpoint) {
+  @include media-breakpoint-up($menu-toggle-breakpoint) {
     width: auto;
     padding: 2rem 1rem 2.5rem;
   }
