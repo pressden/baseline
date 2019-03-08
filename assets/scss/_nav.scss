@@ -18,6 +18,7 @@
     display: block;
     color: $menu-link-color;
     outline-offset: -1px;
+    font-size: $menu-font-size;
     text-decoration: none;
     letter-spacing: 0.5px;
     // @TODO: Bring back `text-align: center` when flexbox is working properly
@@ -61,23 +62,16 @@
       width: 100%;
       background-color: #fff;
       position: relative;
+      font-size: $menu-submenu-font-size;
       word-wrap: break-word;
-      // @TODO: Bring back `text-align: left` only if we bring back centering on the main menu anchors
-      //text-align: left;
-
-      /*
-      padding-bottom: .875rem;
-      padding-top: .875rem;
-      font-size: .9rem;
-      */
 
       @include media-breakpoint-up($menu-toggle-breakpoint) {
         // @TODO: Width is 100% and container is reduced at this breakpoint. Does the anchor width need to be manually reduced as well?
         width: $menu-submenu-width;
         border: 1px solid #eee;
 		    border-top: 0;
-		    padding-bottom: 15px;
-		    padding-top: 15px;
+		    padding-bottom: .875rem;
+        padding-top: .875rem;
       }
     }
 
@@ -229,7 +223,7 @@
   }
 
   a {
-    font-size: 1.1rem;
+    font-size: $main-menu-font-size;
   }
 
   .wp-custom-logo & {
@@ -284,12 +278,13 @@
     a {
       background-color: lighten( $utility-menu-background-color, 10% );
       border-color: lighten( $utility-menu-background-color, 5% );
+      font-size: $utility-menu-submenu-font-size;
     }
   }
 
   a {
     color: $utility-menu-link-color;
-    font-size: .8rem;
+    font-size: $utility-menu-font-size;
     text-transform: uppercase;
   }
 }

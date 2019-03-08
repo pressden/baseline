@@ -20,15 +20,24 @@ $menu-toggle-breakpoint:          md !default;
 $menu-submenu-width:              180px !default;
 $menu-link-color:                 #333 !default;
 $menu-link-color-active:          #00b9eb !default;
+$menu-font-size:                  $font-size-base !default;
+$menu-submenu-font-size:          .9rem !default;
 
 // Utility Menu
 $utility-menu-background-color:   #23282d !default;
 $utility-menu-link-color:         #fff !default;
+$utility-menu-font-size:          .9rem !default;
+$utility-menu-submenu-font-size:  $utility-menu-font-size !default;
 
 // Main Menu
 $main-menu-justify-content:       space-between !default;
 $main-menu-background-color:      #efefef !default;
 $main-menu-link-color:            $menu-link-color !default;
+$main-menu-font-size:             1.1rem !default;
+$main-menu-submenu-font-size:     .9rem !default;
+
+// Footer Menu
+$footer-menu-font-size:           $font-size-base !default;
 
 // Layout
 $layout-max-width:                1200px !default;
