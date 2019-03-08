@@ -1,10 +1,11 @@
 .site-footer {
   padding: 2rem 0;
-  background-color: #f8f9fa;
+  background-color: $footer-background-color;
 
   & > .wrap {
-    @include site-container();
     padding: 0 1rem;
+
+    @include site-container();
   }
 
   p {
