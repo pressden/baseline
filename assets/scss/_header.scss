@@ -1,6 +1,6 @@
 .site-header {
   width: 100%;
-  background-color: $header_background_color;
+  background-color: $header-background-color;
 
   @include media-breakpoint-up($menu-toggle-breakpoint) {
     position: fixed;
