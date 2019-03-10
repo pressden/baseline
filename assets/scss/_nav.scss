@@ -299,7 +299,7 @@
     @include site-container();
 
     @include media-breakpoint-up($menu-toggle-breakpoint) {
-      padding: 0 .5rem;
+      padding: 0 $menu-horizontal-padding;
       display: flex;
       justify-content: $main-menu-justify-content;
     }
@@ -321,7 +321,7 @@
     @include site-container();
 
     @include media-breakpoint-up($menu-toggle-breakpoint) {
-      padding: 0 .5rem;
+      padding: 0 $menu-horizontal-padding;
       justify-content: center;
     }
   }
