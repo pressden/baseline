@@ -59,3 +59,9 @@ $grid-breakpoints: (
 $transition-duration:             0.2s !default;
 $transition-timing:               ease-in-out !default;
 $transition-defaults:             $transition-duration $transition-timing !default;
+
+// Blocks (variables for all blocks)
+$block-breakpoint:                md !default;
+
+// Column Block
+$block-columns-breakpoint:        $block-breakpoint !default;

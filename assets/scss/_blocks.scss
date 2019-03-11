@@ -1,0 +1,45 @@
+// BLOCKS
+
+// Block styles wrapped in .site-container will override WordPress defaults.
+.site-container {
+
+  // WP Block Image
+  .wp-block-image {
+    margin-bottom: 2rem;
+  }
+
+  // WP Block Columns
+  .wp-block-columns {
+
+    @include media-breakpoint-up($block-columns-breakpoint) {
+      flex-wrap: nowrap;
+    }
+
+    .wp-block-column {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 2rem;
+      flex-basis: 100%;
+
+      @include media-breakpoint-up($block-columns-breakpoint) {
+        margin-left: 1rem;  // default: 32px
+        margin-right: 1rem;  // default: 32px
+      }
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+}
