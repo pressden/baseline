@@ -12,3 +12,20 @@
     margin-bottom: 0;
   }
 }
+
+.footer-widgets {
+  padding: 2rem 0;
+  background-color: $footer-widgets-background-color;
+
+  & > .wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+
+    @include site-container();
+  }
+
+  .footer-widget-area {
+    flex: 1;
+  }
+}
