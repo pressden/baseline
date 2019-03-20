@@ -1,0 +1,123 @@
+// ALIGNMENT
+
+// Block styles wrapped in .site-container will override WordPress defaults.
+.site-container {
+  .alignfull {
+    // put this in a media query
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    max-width: 100vw;
+
+    img {
+      width: 100% !important;
+    }
+  }
+}
+
+/*
+.alignleft {
+  margin-right: 1rem;
+}
+
+.alignright {
+  margin-left: 1rem;
+}
+*/
+
+
+
+/*
+.nav-utility {
+  margin-left: calc(-50vw + 100% / 2);
+  margin-right: calc(-50vw + 100% / 2);
+  background-color: $utility-menu-background-color;
+  flex: 0 0 100vw;
+
+  .genesis-nav-menu {
+    @include site-container();
+
+    @include media-breakpoint-up($menu-toggle-breakpoint) {
+      padding-right: .5rem;
+      justify-content: flex-end;
+    }
+  }
+}
+*/
+
+
+/*
+.wp-block-image {
+	margin-bottom: 20px;
+}
+
+.wp-block-button.alignleft,
+.wp-block-cover.alignleft,
+.wp-block-image .alignleft {
+	margin-right: 20px;
+}
+
+.wp-block-button.alignright,
+.wp-block-cover.alignright,
+.wp-block-image .alignright {
+	margin-left: 20px;
+}
+
+.wp-block-image.alignwide,
+.wp-block-image.alignfull,
+.wp-block-embed.alignwide,
+.wp-block-embed.alignfull {
+	margin-bottom: 30px;
+}
+
+.page.full-width-content .entry-content .alignfull,
+.single.full-width-content .entry-content .alignfull {
+	max-width: 100%;
+}
+
+@media only screen and (min-width: 1000px) {
+
+	.page.full-width-content .entry-content .alignfull,
+	.single.full-width-content .entry-content .alignfull {
+		margin-left: calc(-960px / 2 + 100% / 2);
+		margin-right: calc(-960px / 2 + 100% / 2);
+		max-width: 960px;
+	}
+
+	.page.full-width-content .entry-content .alignwide,
+	.single.full-width-content .entry-content .alignwide {
+		margin-left: -80px;
+		margin-right: -80px;
+		max-width: 960px;
+	}
+
+}
+
+@media only screen and (min-width: 1240px) {
+
+	.page.full-width-content .entry-content .alignfull,
+	.single.full-width-content .entry-content .alignfull {
+		margin-left: calc(-1200px / 2 + 100% / 2);
+		margin-right: calc(-1200px / 2 + 100% / 2);
+		max-width: 1200px;
+	}
+
+	.page.full-width-content.custom-page .entry-content .alignfull {
+		margin-left: -200px;
+		margin-right: -200px;
+		max-width: 1200px;
+	}
+
+	.page.full-width-content .entry-content .alignwide,
+	.single.full-width-content .entry-content .alignwide {
+		margin-left: -160px;
+		margin-right: -160px;
+		width: auto;
+	}
+
+	.custom-page.full-width-content .entry-content .alignwide {
+		margin-left: -80px;
+		margin-right: -80px;
+	}
+
+}
+*/

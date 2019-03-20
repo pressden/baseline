@@ -1,14 +1,16 @@
 @import "mixins";
 @import "bootstrap-reboot"; // imports 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import "material-icons";   // material icons implemented locally in order to work offline
 @import "accessibility";
 @import "typography";
 @import "common";
-@import "material-icons";
 @import "layout";
+@import "alignment";
 @import "header";
 @import "nav";
 @import "content";
 @import "sidebar";
+@import "footer-widgets";
 @import "footer";
 @import "blocks";
 @import "widget";
