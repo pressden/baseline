@@ -21,11 +21,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
     @include site-container();
 
     @include media-breakpoint-down(sm) {
+      // @TODO: Determine if this downward breakpoint is necessary
       display: block;
     }
   }
@@ -33,18 +34,21 @@
 
 .title-area {
   display: inline-block;
-  padding: .5rem .5rem 1rem;
+  padding: 1rem;
   transition: all 0.2s ease-in-out;
   width: 100%;
+  text-align: center;
 
   @include media-breakpoint-up($menu-toggle-breakpoint) {
     width: auto;
-    padding: 2rem 1rem 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: left;
   }
 
   .shrink & {
-    padding-top: .1rem;
-    padding-bottom: .25rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
   }
 
   .has-split-menu & {
@@ -60,16 +64,15 @@
   }
 }
 
-.shrink {
-  .site-description {
-    display: none;
-  }
-}
-
 .site-title {
   margin: 0;
   font-size: 2.25rem;
   font-weight: $headline-font-weight;
+  text-align: center;
+
+  @include media-breakpoint-up($menu-toggle-breakpoint) {
+    text-align: left;
+  }
 
   a {
     text-decoration: none;
@@ -82,4 +85,39 @@
 
 .site-description {
   margin: 0;
+  text-align: center;
+
+  @include media-breakpoint-up($menu-toggle-breakpoint) {
+    text-align: left;
+  }
+
+  .shrink & {
+    display: none;
+  }
+}
+
+.wp-custom-logo {
+  .site-description,
+  .site-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+	  word-wrap: normal;
+  }
+}
+
+.custom-logo {
+  max-height: $custom-logo-mobile-height;
+  width: auto;
+  transition: all $transition-defaults;
+
+  @include media-breakpoint-up($menu-toggle-breakpoint) {
+    max-height: $custom-logo-max-height;
+  }
+
+  .shrink & {
+    max-height: $custom-logo-shrink-height;
+  }
 }

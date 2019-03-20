@@ -19,6 +19,11 @@ $header-full-height:              100px !default;
 $header-reduced-height:           75px !default;
 $header-background-color:         #fff !default;
 
+// Custom Logo
+$custom-logo-max-height:          125px !default;
+$custom-logo-mobile-height:       75px !default;
+$custom-logo-shrink-height:       60px !default;
+
 // Content
 $site-inner-margin-top:           $header-full-height + 35px !default;
 
@@ -47,7 +52,7 @@ $utility-menu-submenu-font-size:  $utility-menu-font-size !default;
 $main-menu-justify-content:       space-between !default;
 $main-menu-background-color:      #efefef !default;
 $main-menu-link-color:            $menu-link-color !default;
-$main-menu-font-size:             1.1rem !default;
+$main-menu-font-size:             $font-size-base !default;
 $main-menu-submenu-font-size:     .9rem !default;
 
 // Footer Menu

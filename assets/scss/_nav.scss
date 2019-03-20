@@ -13,8 +13,7 @@
   }
 
   a {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding: .75rem 1rem;
     display: block;
     color: $menu-link-color;
     outline-offset: -1px;
@@ -210,16 +209,10 @@
 
 .nav-primary,
 .nav-secondary {
-  // @TODO: Delete margin-bottom if we end up not needing it
-  margin-bottom: 2rem;
   transition: all $transition-defaults;
 
   @include media-breakpoint-up($menu-toggle-breakpoint) {
     padding: 0 .5rem;
-  }
-
-  .shrink & {
-    margin-bottom: .75rem;
   }
 
   a {
@@ -229,8 +222,7 @@
   .wp-custom-logo & {
     @include media-breakpoint-up($menu-toggle-breakpoint) {
       margin-top: 12px;
-		  margin-bottom: 12px;
-      width: calc((100% / 2) - 122px);
+      margin-bottom: 12px;
     }
   }
 
@@ -307,7 +299,6 @@
 
   a {
     color: $main-menu-link-color;
-    font-size: 1.1rem;
   }
 }
 
