@@ -10,20 +10,30 @@ $h6-font-size:                    $font-size-base * 1.125 !default;
 $body-font-weight:                lighter !default;
 $headline-font-weight:            normal !default;
 
+// Links
+$link-color:                      #00b9eb !default;
+$link-hover-color:                darken($link-color, 15%) !default;
+
 // Header
 $header-full-height:              100px !default;
 $header-reduced-height:           75px !default;
 $header-background-color:         #fff !default;
 
+// Content
+$site-inner-margin-top:           $header-full-height + 35px !default;
+
+// Footer Widgets
+$footer-widgets-background-color: #f9f9f9 !default;
+
 // Footer
-$footer-background-color:         #f8f9fa !default;
+$footer-background-color:         #f3f3f3 !default;
 
 // Menu (variables for all menus)
 $menu-toggle-breakpoint:          md !default;
 $menu-horizontal-padding:         .5rem !default;
 $menu-submenu-width:              180px !default;
 $menu-link-color:                 #333 !default;
-$menu-link-color-active:          #00b9eb !default;
+$menu-link-hover-color:           $link-color !default;
 $menu-font-size:                  $font-size-base !default;
 $menu-submenu-font-size:          .9rem !default;
 
