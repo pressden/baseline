@@ -5,9 +5,17 @@
   }
 
   .label-left {
+    .field-wrap {
+      flex-wrap: nowrap;
+    }
+
     .nf-field-label {
       width: $ninja-forms-compact-label-width;
       text-align: left;
+    }
+
+    .nf-field-element {
+      width: 100%;
     }
   }
 
