@@ -1,0 +1,17 @@
+// NINJA FORMS
+.footer-widgets {
+  .nf-form-fields-required {
+    display: none;
+  }
+
+  .label-left {
+    .nf-field-label {
+      width: $ninja-forms-compact-label-width;
+      text-align: left;
+    }
+  }
+
+  .nf-error-field-errors {
+    display: none;
+  }
+}

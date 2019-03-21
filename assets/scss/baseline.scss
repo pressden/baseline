@@ -1,6 +1,8 @@
+// BASELINE
+
 @import "mixins";
-@import "bootstrap-reboot"; // imports 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
-@import "material-icons";   // material icons implemented locally in order to work offline
+@import "bootstrap-reboot";         // imports 'node_modules/bootstrap/scss/bootstrap-reboot.scss'
+@import "vendors/material-icons";   // material icons implemented locally in order to work offline
 @import "accessibility";
 @import "typography";
 @import "common";
@@ -14,3 +16,6 @@
 @import "blocks";
 @import "widget";
 @import "search";
+
+// VENDORS
+@import "vendors/ninja-forms";      // custom styles for ninja forms
