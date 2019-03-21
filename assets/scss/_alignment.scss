@@ -36,7 +36,7 @@
   .genesis-nav-menu {
     @include site-container();
 
-    @include media-breakpoint-up($menu-toggle-breakpoint) {
+    @include media-breakpoint-up($layout-breakpoint) {
       padding-right: .5rem;
       justify-content: flex-end;
     }

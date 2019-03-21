@@ -2,32 +2,31 @@
   width: 100%;
   background-color: $header-background-color;
 
-  @include media-breakpoint-up($menu-toggle-breakpoint) {
+  @include media-breakpoint-up($layout-breakpoint) {
     position: fixed;
     top: 0;
     z-index: 9999;
+
+    .shrink & {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    }
   }
 
   .admin-bar & {
     top: 32px;
   }
 
-  .shrink & {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
-  }
-
   & > .wrap {
     width: 100%;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
     @include site-container();
 
-    @include media-breakpoint-down(sm) {
-      // @TODO: Determine if this downward breakpoint is necessary
-      display: block;
+    @include media-breakpoint-up($layout-breakpoint) {
+      display: flex;
     }
   }
 }
@@ -39,7 +38,7 @@
   width: 100%;
   text-align: center;
 
-  @include media-breakpoint-up($menu-toggle-breakpoint) {
+  @include media-breakpoint-up($layout-breakpoint) {
     width: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -56,7 +55,7 @@
   }
 
   .has-left-menu & {
-    text-aslign: right;
+    text-align: right;
   }
 
   a {
@@ -70,7 +69,7 @@
   font-weight: $headline-font-weight;
   text-align: center;
 
-  @include media-breakpoint-up($menu-toggle-breakpoint) {
+  @include media-breakpoint-up($layout-breakpoint) {
     text-align: left;
   }
 
@@ -87,7 +86,7 @@
   margin: 0;
   text-align: center;
 
-  @include media-breakpoint-up($menu-toggle-breakpoint) {
+  @include media-breakpoint-up($layout-breakpoint) {
     text-align: left;
   }
 
@@ -113,7 +112,7 @@
   width: auto;
   transition: all $transition-defaults;
 
-  @include media-breakpoint-up($menu-toggle-breakpoint) {
+  @include media-breakpoint-up($layout-breakpoint) {
     max-height: $custom-logo-max-height;
   }
 
