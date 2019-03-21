@@ -15,17 +15,68 @@
 
 .footer-widgets {
   padding: 2rem 0;
+  font-size: $footer-widgets-font-size;
   background-color: $footer-widgets-background-color;
 
   & > .wrap {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 1rem;
 
     @include site-container();
+
+    @include media-breakpoint-up($block-columns-breakpoint) {
+      flex-wrap: nowrap;
+    }
   }
 
   .footer-widget-area {
-    flex: 1;
+    flex-basis: 100%;
+
+    @include media-breakpoint-up($block-columns-breakpoint) {
+      margin-left: 1rem;  // default: 32px
+      margin-right: 1rem;  // default: 32px
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .widget-title {
+    font-size: $h4-font-size;
   }
 }
+
+/*
+// WP Block Columns
+.wp-block-columns {
+
+  @include media-breakpoint-up($block-columns-breakpoint) {
+    flex-wrap: nowrap;
+  }
+
+  .wp-block-column {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    flex-basis: 100%;
+
+    @include media-breakpoint-up($block-columns-breakpoint) {
+      margin-left: 1rem;  // default: 32px
+      margin-right: 1rem;  // default: 32px
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+*/
