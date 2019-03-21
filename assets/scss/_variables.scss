@@ -1,5 +1,20 @@
+// Layout
+$layout-max-width:                1200px !default;
+$layout-breakpoint:               md !default;
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px
+) !default;
+
 // Typography
 $font-size-base:                  1rem !default;
+$font-size-large:                 $font-size-base + .1 !default;
+$font-size-small:                 $font-size-base - .1 !default;
 $h1-font-size:                    $font-size-base * 2.25 !default;
 $h2-font-size:                    $font-size-base * 1.875 !default;
 $h3-font-size:                    $font-size-base * 1.625 !default;
@@ -27,25 +42,24 @@ $custom-logo-shrink-height:       60px !default;
 // Content
 $site-inner-margin-top:           $header-full-height + 35px !default;
 
-// Footer Widgets
-$footer-widgets-background-color: #f9f9f9 !default;
-
 // Footer
 $footer-background-color:         #f3f3f3 !default;
+$footer-widgets-background-color: #f9f9f9 !default;
+$footer-widgets-font-size:        $font-size-small !default;
 
 // Menu (variables for all menus)
-$menu-toggle-breakpoint:          md !default;
+$menu-toggle-breakpoint:          $layout-breakpoint !default;
 $menu-horizontal-padding:         .5rem !default;
 $menu-submenu-width:              180px !default;
 $menu-link-color:                 #333 !default;
 $menu-link-hover-color:           $link-color !default;
 $menu-font-size:                  $font-size-base !default;
-$menu-submenu-font-size:          .9rem !default;
+$menu-submenu-font-size:          $font-size-small !default;
 
 // Utility Menu
 $utility-menu-background-color:   #23282d !default;
 $utility-menu-link-color:         #fff !default;
-$utility-menu-font-size:          .9rem !default;
+$utility-menu-font-size:          $font-size-small !default;
 $utility-menu-submenu-font-size:  $utility-menu-font-size !default;
 
 // Main Menu
@@ -58,25 +72,18 @@ $main-menu-submenu-font-size:     .9rem !default;
 // Footer Menu
 $footer-menu-font-size:           $font-size-base !default;
 
-// Layout
-$layout-max-width:                1200px !default;
-
-// Grid
-$grid-breakpoints: (
-  xs: 0,
-  sm: 320px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px
-) !default;
-
 // Transition
 $transition-duration:             0.2s !default;
 $transition-timing:               ease-in-out !default;
 $transition-defaults:             $transition-duration $transition-timing !default;
 
 // Blocks (variables for all blocks)
-$block-breakpoint:                md !default;
+$block-breakpoint:                $layout-breakpoint !default;
 
 // Column Block
-$block-columns-breakpoint:        $block-breakpoint !default;
+$block-columns-breakpoint:        $layout-breakpoint !default;
+
+// VENDORS
+
+// Ninja Forms
+$ninja-forms-compact-label-width: 75px !default;
