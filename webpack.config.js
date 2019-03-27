@@ -51,6 +51,11 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    alias: {
+      baseline: path.resolve(__dirname, './assets/js/'),
+    }
+  },
   plugins: [
     new ExtractTextPlugin('../style.css'),
     new webpack.ProvidePlugin({

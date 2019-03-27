@@ -1,7 +1,7 @@
 // JS
-require('../baseline/assets/js/baseline');
-require('../baseline/assets/js/responsive-menus.js');
-require('../baseline/assets/js/sticky-header.js');
+import baseline from 'baseline/baseline';
+import responsiveMenus from 'baseline/responsive-menus';
+import stickyHeader from 'baseline/sticky-header';
 
 // CSS && SCSS
 require('../scss/theme-header.scss');                // used by WordPress to identify the theme
