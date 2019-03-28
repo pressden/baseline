@@ -16,111 +16,64 @@ function baseline_move_sidebar_alt() {
 }
 */
 
+add_action( 'after_setup_theme', 'childtheme_initialize', 1 );
 
-// WORDPRESS CLEAN UP
+function childtheme_initialize() {
+  // THEME SETUP
 
-// disable all things emoji
-add_action( 'init', 'childtheme_disable_emoji', 1 );
-if( !function_exists( 'childtheme_disable_emoji' ) ) {
-	function childtheme_disable_emoji() {
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-		remove_action( 'wp_print_styles', 'print_emoji_styles' );
-		remove_action( 'admin_print_styles', 'print_emoji_styles' );
-		remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
-		remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
-		remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-		add_filter( 'tiny_mce_plugins', 'childtheme_disable_tinymce_emoji' );
-	}
+  // Adds support for HTML5 markup structure.
+  add_theme_support( 'html5', genesis_get_config( 'html5' ) );
+
+  // Adds support for accessibility.
+  add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
+
+  // Adds viewport meta tag for mobile browsers.
+  add_theme_support( 'genesis-responsive-viewport' );
+
+  // Adds custom logo in Customizer > Site Identity.
+  add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
+
+  // Renames primary and secondary navigation menus.
+  add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
+
+  // Adds support for after entry widget.
+  add_theme_support( 'genesis-after-entry-widget-area' );
+
+  // Adds support for 2-column footer widgets.
+  add_theme_support( 'genesis-footer-widgets', 3 );
+
+
+
+  // GUTENBERG SUPPORT
+  // Adds support for wide and full alignment options on image blocks (and a few others)
+  add_theme_support( 'align-wide' );
+
+  // Adds support for responsive embeds
+  add_theme_support( 'responsive-embeds' );
+
+  // Adds support for selectable font sizes in paragraph blocks
+  // @TODO: Review font size options in `childtheme/config/editor-font-sizes`
+  // @TODO: Add supporting styles as needed
+  add_theme_support( 'editor-font-sizes', genesis_get_config( 'editor-font-sizes' ) );
+
+  // Adds support for color palette selections in blocks that allow it
+  // @TODO: Review color options in `childtheme/config/editor-color-palette`
+  // @TODO: Add supporting styles as needed
+  add_theme_support( 'editor-color-palette', genesis_get_config( 'editor-color-palette' ) );
+
+  // Adds support for custom Gutenberg editor styles (backend)
+  // @TODO: Add supporting styles as needed
+  add_theme_support( 'editor-styles' );
+  // @TODO: Break editor styles into a standalone style sheet
+  // @TODO: See Revolution Pro styles for working example here `/lib/gutenberg/style-editor.css`
+  // @TODO: Change line below to reflect correct path after implementation
+  //add_editor_style( '/lib/gutenberg/style-editor.css' );
+
+  // @TODO: Research the Revolution Pro implementation of inline styles to determine benefits
+  //require_once get_stylesheet_directory() . '/lib/gutenberg/inline-styles.php';
 }
 
-// filter function used to remove the tinymce emoji plugin
-if( !function_exists( 'childtheme_disable_tinymce_emoji' ) ) {
-	function childtheme_disable_tinymce_emoji( $plugins ) {
-		return array_diff( $plugins, array( 'wpemoji' ) );
-	}
-}
 
-// remove the DNS prefetch
-add_filter( 'emoji_svg_url', '__return_false' );
-
-
-// THEME SETUP
-
-// Adds support for HTML5 markup structure.
-add_theme_support( 'html5', genesis_get_config( 'html5' ) );
-
-// Adds support for accessibility.
-add_theme_support( 'genesis-accessibility', genesis_get_config( 'accessibility' ) );
-
-// Adds viewport meta tag for mobile browsers.
-add_theme_support( 'genesis-responsive-viewport' );
-
-// Adds custom logo in Customizer > Site Identity.
-add_theme_support( 'custom-logo', genesis_get_config( 'custom-logo' ) );
-
-// Renames primary and secondary navigation menus.
-add_theme_support( 'genesis-menus', genesis_get_config( 'menus' ) );
-
-// Adds support for after entry widget.
-add_theme_support( 'genesis-after-entry-widget-area' );
-
-// Adds support for 2-column footer widgets.
-add_theme_support( 'genesis-footer-widgets', 3 );
-
-
-
-// GUTENBERG SUPPORT
-// Adds support for wide and full alignment options on image blocks (and a few others)
-add_theme_support( 'align-wide' );
-
-// Adds support for responsive embeds
-add_theme_support( 'responsive-embeds' );
-
-// Adds support for selectable font sizes in paragraph blocks
-// @TODO: Review font size options in `childtheme/config/editor-font-sizes`
-// @TODO: Add supporting styles as needed
-add_theme_support( 'editor-font-sizes', genesis_get_config( 'editor-font-sizes' ) );
-
-// Adds support for color palette selections in blocks that allow it
-// @TODO: Review color options in `childtheme/config/editor-color-palette`
-// @TODO: Add supporting styles as needed
-add_theme_support( 'editor-color-palette', genesis_get_config( 'editor-color-palette' ) );
-
-// Adds support for custom Gutenberg editor styles (backend)
-// @TODO: Add supporting styles as needed
-add_theme_support( 'editor-styles' );
-// @TODO: Break editor styles into a standalone style sheet
-// @TODO: See Revolution Pro styles for working example here `/lib/gutenberg/style-editor.css`
-// @TODO: Change line below to reflect correct path after implementation
-//add_editor_style( '/lib/gutenberg/style-editor.css' );
-
-// @TODO: Research the Revolution Pro implementation of inline styles to determine benefits
-//require_once get_stylesheet_directory() . '/lib/gutenberg/inline-styles.php';
-
-// Enqueue any assets needed to properly render styles within Gutenberg editor (backend)
-add_action( 'enqueue_block_editor_assets', 'childtheme_block_editor_styles' );
-function childtheme_block_editor_styles() {
-
-  // @TODO: See example below from Revolution Pro and replace with custom implementation
-  /*
-	wp_enqueue_style(
-		'revolution-gutenberg-fonts',
-		'https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,600|Playfair+Display:400,700,700i|Poppins:400',
-		array(),
-		CHILD_THEME_VERSION
-	);
-  */
-}
-
-// Set the content width to match Gutenberg
-// @TODO: Determine if this is even necessary giving our custom SASS implementation
-/*
-add_action( 'after_setup_theme', 'revolution_pro_content_width', 0 );
-function revolution_pro_content_width() {
-  $GLOBALS['content_width'] = apply_filters( 'revolution_pro_content_width', 1200 );
-}
-*/
 
 
 

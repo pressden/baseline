@@ -9,4 +9,6 @@ require_once( 'helpers.php' );
 require_once( 'actions.php' );
 require_once( 'filters.php' );
 require_once( 'frontend.php' );
+require_once( 'gutenberg.php' );
+require_once( 'optimize.php' );
 require_once( 'initialize.php' );
