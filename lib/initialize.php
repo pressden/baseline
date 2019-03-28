@@ -45,6 +45,7 @@ function childtheme_initialize() {
 
 
   // GUTENBERG SUPPORT
+
   // Adds support for wide and full alignment options on image blocks (and a few others)
   add_theme_support( 'align-wide' );
 
@@ -71,6 +72,20 @@ function childtheme_initialize() {
 
   // @TODO: Research the Revolution Pro implementation of inline styles to determine benefits
   //require_once get_stylesheet_directory() . '/lib/gutenberg/inline-styles.php';
+
+
+  // GENESIS ACTIONS
+
+  // Displays custom logo.
+  add_action( 'genesis_site_title', 'the_custom_logo', 0 );
+
+  // Repositions primary navigation menu.
+  remove_action( 'genesis_after_header', 'genesis_do_nav' );
+  add_action( 'genesis_header', 'genesis_do_nav', 6 );
+
+  // Repositions secondary navigation menu.
+  remove_action( 'genesis_after_header', 'genesis_do_subnav' );
+  add_action( 'genesis_header', 'genesis_do_subnav', 12 );
 }
 
 
