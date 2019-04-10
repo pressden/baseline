@@ -54,7 +54,6 @@ module.exports = {
   resolve: {
     alias: {
       baseline: path.resolve(__dirname, './assets/js/'),
-      flexslider: path.resolve(__dirname, 'node_modules/flexslider'),
     }
   },
   plugins: [

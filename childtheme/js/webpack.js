@@ -2,7 +2,6 @@
 import baseline from 'baseline/baseline';
 import responsiveMenus from 'baseline/responsive-menus';
 import stickyHeader from 'baseline/sticky-header';
-import flexslider from 'flexslider';
 
 // CSS && SCSS
 require('../scss/theme-header.scss');                // used by WordPress to identify the theme
