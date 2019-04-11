@@ -33,21 +33,21 @@
 
 .title-area {
   display: inline-block;
-  padding: 1rem;
+  padding: $title-area-padding-y $title-area-padding-x;
   transition: all 0.2s ease-in-out;
   width: 100%;
   text-align: center;
 
   @include media-breakpoint-up($layout-breakpoint) {
     width: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: $title-area-padding-y;
+    padding-bottom: $title-area-padding-y;
     text-align: left;
   }
 
   .shrink & {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: $title-area-shrink-padding-y;
+    padding-bottom: $title-area-shrink-padding-y;
   }
 
   .has-split-menu & {
