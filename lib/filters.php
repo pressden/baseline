@@ -29,6 +29,16 @@ function childtheme_maybe_add_menu_body_class( $classes ) {
 
 }
 
+// Filter footer credits
+add_filter( 'genesis_footer_creds_text', 'childtheme_footer_creds_text' );
+function childtheme_footer_creds_text( $creds_text ) {
+  // Credits contains shortcodes that are filtered by genesis_footer_output before echo
+  $creds_text = sprintf( '[footer_copyright before="%s "] &#x000B7; [footer_childtheme_link before="" after=""] &#x000B7; [footer_loginout]', __( 'Copyright', 'genesis' ) );
+  return $creds_text;
+}
+
+
+
 /*
 // Add custom body class to the head
 add_filter( 'body_class', 'childtheme_body_class' );
