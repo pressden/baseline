@@ -1,7 +1,13 @@
 .site-inner {
   margin-top: $site-inner-margin-top;
+  padding-top: $site-inner-padding-y;
+  padding-bottom: $site-inner-padding-y;
 }
 
 .content {
   padding: 0 1rem;
+}
+
+.entry-header {
+  margin-bottom: 1rem;
 }
