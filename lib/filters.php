@@ -33,7 +33,17 @@ function childtheme_maybe_add_menu_body_class( $classes ) {
 add_filter( 'genesis_footer_creds_text', 'childtheme_footer_creds_text' );
 function childtheme_footer_creds_text( $creds_text ) {
   // Credits contains shortcodes that are filtered by genesis_footer_output before echo
-  $creds_text = sprintf( '[footer_copyright before="%s "] &#x000B7; [footer_childtheme_link before="" after=""] &#x000B7; [footer_loginout]', __( 'Copyright', 'genesis' ) );
+  $credits = array (
+    '[footer_copyright before="' . __( 'Copyright', 'genesis' ) . ' "]',
+    get_bloginfo( 'name' ),
+    __( 'All Rights Reserved', 'childtheme' ),
+    '[footer_loginout]'
+  );
+
+  // Implode the credits with a separator
+  $creds_text = implode( ' &#x000B7; ', $credits );
+
+  // Return the credits
   return $creds_text;
 }
 
