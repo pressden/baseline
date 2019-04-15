@@ -16,7 +16,7 @@ require_once get_template_directory() . '/lib/init.php';
 // Defines the child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'Child Theme' );
 define( 'CHILD_THEME_URL', 'https://github.com/pressden/baseline' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+define( 'CHILD_THEME_VERSION', '1.3.0' );
 
 // Sets up the Theme.
 require_once( 'baseline/lib/baseline.php');
