@@ -13,7 +13,7 @@
   }
 
   a {
-    padding: .75rem 1rem;
+    padding: $menu-link-padding-y $menu-link-padding-x;
     display: block;
     color: $menu-link-color;
     outline-offset: -1px;
@@ -291,7 +291,7 @@
     @include site-container();
 
     @include media-breakpoint-up($menu-toggle-breakpoint) {
-      padding: 0 $menu-horizontal-padding;
+      padding: $menu-padding-y $menu-padding-x;
       display: flex;
       justify-content: $main-menu-justify-content;
     }
@@ -313,7 +313,7 @@
     @include site-container();
 
     @include media-breakpoint-up($menu-toggle-breakpoint) {
-      padding: 0 $menu-horizontal-padding;
+      padding: $menu-padding-y $menu-padding-x;
       justify-content: center;
     }
   }

@@ -1,7 +1,6 @@
 .site-inner {
   margin-top: $site-inner-margin-top;
-  padding-top: $site-inner-padding-y;
-  padding-bottom: $site-inner-padding-y;
+  padding: $site-inner-padding-y $site-inner-padding-x;
 }
 
 .content {

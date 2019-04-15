@@ -42,10 +42,11 @@ $title-area-shrink-padding-y:     1rem !default;
 // Custom Logo
 $custom-logo-max-height:          125px !default;
 $custom-logo-mobile-height:       75px !default;
-$custom-logo-shrink-height:       60px !default;
+$custom-logo-shrink-height:       $custom-logo-mobile-height !default;
 
 // Content
 $site-inner-margin-top:           $header-full-height + 35px !default;
+$site-inner-padding-x:            0 !default;
 $site-inner-padding-y:            2rem !default;
 
 // Footer
@@ -55,12 +56,15 @@ $footer-widgets-font-size:        $font-size-small !default;
 
 // Menu (variables for all menus)
 $menu-toggle-breakpoint:          $layout-breakpoint !default;
-$menu-horizontal-padding:         .5rem !default;
+$menu-padding-x:                  .5rem !default;
+$menu-padding-y:                  0 !default;
 $menu-submenu-width:              180px !default;
+$menu-link-padding-x:             1rem !default;
+$menu-link-padding-y:             1rem !default;
 $menu-link-color:                 #333 !default;
 $menu-link-hover-color:           $link-color !default;
-$menu-font-size:                  $font-size-base !default;
-$menu-submenu-font-size:          $font-size-small !default;
+$menu-font-size:                  $font-size-large !default;
+$menu-submenu-font-size:          $font-size-base !default;
 
 // Utility Menu
 $utility-menu-background-color:   #23282d !default;
@@ -72,7 +76,7 @@ $utility-menu-submenu-font-size:  $utility-menu-font-size !default;
 $main-menu-justify-content:       space-between !default;
 $main-menu-background-color:      #efefef !default;
 $main-menu-link-color:            $menu-link-color !default;
-$main-menu-font-size:             $font-size-base !default;
+$main-menu-font-size:             $font-size-large !default;
 $main-menu-submenu-font-size:     .9rem !default;
 
 // Footer Menu
