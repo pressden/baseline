@@ -3,6 +3,13 @@
   padding: $site-inner-padding-y $site-inner-padding-x;
 }
 
+// override the .site-inner padding on specific pages
+.home {
+  .site-inner {
+    padding: $site-inner-home-padding-y $site-inner-home-padding-x;
+  }
+}
+
 .content {
   padding: 0 1rem;
 }

@@ -25,13 +25,14 @@ $h6-font-size:                    $font-size-base * 1.125 !default;
 $body-font-weight:                lighter !default;
 $headline-font-weight:            normal !default;
 
+// Alignment
+$align-wide-margin-x:             -150px !default;
+
 // Links
 $link-color:                      #00b9eb !default;
 $link-hover-color:                darken($link-color, 15%) !default;
 
 // Header
-$header-full-height:              100px !default;
-$header-reduced-height:           75px !default;
 $header-background-color:         #fff !default;
 
 // Title Area
@@ -45,9 +46,11 @@ $custom-logo-mobile-height:       75px !default;
 $custom-logo-shrink-height:       $custom-logo-mobile-height !default;
 
 // Content
-$site-inner-margin-top:           $header-full-height + 35px !default;
+$site-inner-margin-top:           100px !default;
 $site-inner-padding-x:            0 !default;
 $site-inner-padding-y:            2rem !default;
+$site-inner-home-padding-x:       $site-inner-padding-x !default;
+$site-inner-home-padding-y:       0 !default;
 
 // Footer
 $footer-background-color:         #f3f3f3 !default;
@@ -67,7 +70,7 @@ $menu-font-size:                  $font-size-large !default;
 $menu-submenu-font-size:          $font-size-base !default;
 
 // Utility Menu
-$utility-menu-background-color:   #23282d !default;
+$utility-menu-background-color:   #333 !default;
 $utility-menu-link-color:         #fff !default;
 $utility-menu-font-size:          $font-size-small !default;
 $utility-menu-submenu-font-size:  $utility-menu-font-size !default;
