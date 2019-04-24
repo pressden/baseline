@@ -11,6 +11,30 @@ $grid-breakpoints: (
   xl: 1200px
 ) !default;
 
+// Colors
+$primary:                         #266fd0 !default;
+$secondary:                       #202020 !default;
+$support:                         #dfdfdf !default;
+
+$action:                          #ffbf36 !default;
+$highlight:                       #fff5dc !default;
+$info:                            #abe0f9 !default;
+$notice:                          #f9f49c !default;
+$warning:                         #fbd362 !default;
+$pass:                            #95dc5c !default;
+$fail:                            #ff6050 !default;
+
+$white:                           #fff !default;
+$black:                           #000 !default;
+
+$gray-lightest:                   #f6f6f6 !default;
+$gray-lighter:                    #dadada !default;
+$gray-light:                      #bababa !default;
+$gray:                            #888888 !default;
+$gray-dark:                       #5c5c5c !default;
+$gray-darker:                     #3d3d3d !default;
+$gray-darkest:                    #202020 !default;
+
 // Typography
 $font-size-base:                  1rem !default;
 $font-size-large:                 $font-size-base + .1 !default;
