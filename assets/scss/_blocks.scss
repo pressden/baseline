@@ -18,9 +18,7 @@
     }
 
     .wp-block-column {
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 2rem;
+      margin: 0;
       flex-basis: 100%;
 
       @include media-breakpoint-up($block-columns-breakpoint) {
