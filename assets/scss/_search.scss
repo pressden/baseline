@@ -2,7 +2,7 @@
 	//overflow: hidden;
   position: relative;
 
-  &:before {
+  &::before {
     position: absolute;
     top: .25rem;
     left: .5rem;
