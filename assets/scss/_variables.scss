@@ -93,11 +93,11 @@ $menu-link-hover-color:           $link-color !default;
 $menu-font-size:                  $font-size-large !default;
 $menu-submenu-font-size:          $font-size-base !default;
 
-// Utility Menu
-$utility-menu-background-color:   #333 !default;
-$utility-menu-link-color:         #fff !default;
-$utility-menu-font-size:          $font-size-small !default;
-$utility-menu-submenu-font-size:  $utility-menu-font-size !default;
+// Utility Bar
+$utility-bar-background-color:    #333 !default;
+$utility-bar-link-color:          #fff !default;
+$utility-bar-font-size:           $font-size-small !default;
+$utility-bar-submenu-font-size:   $utility-bar-font-size !default;
 
 // Main Menu
 $main-menu-justify-content:       space-between !default;

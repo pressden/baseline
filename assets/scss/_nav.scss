@@ -1,6 +1,6 @@
 // @TODO: Reivew styles for removeables
 // @TODO: Determine why placement of header menus stopped working
-.genesis-nav-menu {
+.menu {
   display: block;
   margin: 0;
   padding: 0;
@@ -249,45 +249,13 @@
 	}
 }
 
-.nav-utility {
-  margin-left: calc(-50vw + 100% / 2);
-  margin-right: calc(-50vw + 100% / 2);
-  background-color: $utility-menu-background-color;
-  flex: 0 0 100vw;
-
-  .genesis-nav-menu {
-    @include site-container();
-
-    @include media-breakpoint-up($menu-toggle-breakpoint) {
-      padding-right: .5rem;
-      justify-content: flex-end;
-    }
-  }
-
-  .sub-menu {
-    border-color: lighten( $utility-menu-background-color, 5% );
-
-    a {
-      background-color: lighten( $utility-menu-background-color, 10% );
-      border-color: lighten( $utility-menu-background-color, 5% );
-      font-size: $utility-menu-submenu-font-size;
-    }
-  }
-
-  a {
-    color: $utility-menu-link-color;
-    font-size: $utility-menu-font-size;
-    text-transform: uppercase;
-  }
-}
-
 .nav-main {
   margin-left: calc(-50vw + 100% / 2);
   margin-right: calc(-50vw + 100% / 2);
   background-color: $main-menu-background-color;
   flex: 0 0 100vw;
 
-  .genesis-nav-menu {
+  .menu {
     @include site-container();
 
     @include media-breakpoint-up($menu-toggle-breakpoint) {
@@ -309,7 +277,7 @@
   margin-bottom: 1rem;
   flex: 0 0 100vw;
 
-  .genesis-nav-menu {
+  .menu {
     @include site-container();
 
     @include media-breakpoint-up($menu-toggle-breakpoint) {
