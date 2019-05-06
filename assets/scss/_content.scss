@@ -1,3 +1,5 @@
+// CONTENT
+
 .site-inner {
   margin-top: $site-inner-margin-top;
   padding: $site-inner-padding-y $site-inner-padding-x;
@@ -11,9 +13,18 @@
 }
 
 .content {
+  margin: 0 auto;
   padding: 0 1rem;
+
+  @include media-breakpoint-up($layout-breakpoint) {
+    max-width: $layout-content-max-width;
+  }
 }
 
 .entry-header {
   margin-bottom: 1rem;
+}
+
+.entry-title {
+  text-align: center;
 }

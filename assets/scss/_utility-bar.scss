@@ -1,8 +1,8 @@
+// UTILITY BAR
+
 .utility-bar {
-  margin-left: calc(-50vw + 100% / 2);
-  margin-right: calc(-50vw + 100% / 2);
+  @include alignfull-flex();
   background-color: $utility-bar-background-color;
-  flex: 0 0 100vw;
 
   & > .wrap {
     padding: 0 .5rem;

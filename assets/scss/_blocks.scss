@@ -10,6 +10,7 @@
   }
 
   // WP Block Columns
+  // TODO: Styles matching `.footer-widget-area` could be converted to @mixins
   .wp-block-columns {
     flex-wrap: wrap;
 
@@ -18,24 +19,30 @@
     }
 
     .wp-block-column {
-      margin: 0;
       flex-basis: 100%;
+      margin-left: 0;
+      margin-right: 0;
 
       @include media-breakpoint-up($block-columns-breakpoint) {
         margin-left: 1rem;  // default: 32px
         margin-right: 1rem;  // default: 32px
+        margin-bottom: 0;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
 
       & > *:last-child {
         margin-bottom: 0;
-      }
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:last-child {
-        margin-right: 0;
       }
 
     }

@@ -1,3 +1,5 @@
+// NAV
+
 // @TODO: Reivew styles for removeables
 // @TODO: Determine why placement of header menus stopped working
 .menu {
@@ -250,10 +252,8 @@
 }
 
 .nav-main {
-  margin-left: calc(-50vw + 100% / 2);
-  margin-right: calc(-50vw + 100% / 2);
+  @include alignfull-flex();
   background-color: $main-menu-background-color;
-  flex: 0 0 100vw;
 
   .menu {
     @include site-container();
@@ -272,10 +272,8 @@
 }
 
 .nav-footer {
-  margin-left: calc(-50vw + 100% / 2);
-  margin-right: calc(-50vw + 100% / 2);
+  @include alignfull-flex();
   margin-bottom: 1rem;
-  flex: 0 0 100vw;
 
   .menu {
     @include site-container();

@@ -1,6 +1,40 @@
+// MIXINS
+
 @mixin site-container() {
   margin: 0 auto;
-  max-width: $layout-max-width;
+  max-width: map-get($container-max-widths, 'sm');
+
+  @include media-breakpoint-up(md) {
+    max-width: map-get($container-max-widths, 'md');
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: map-get($container-max-widths, 'lg');
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: map-get($container-max-widths, 'xl');
+  }
+}
+
+@mixin content-container() {
+  margin: 0 auto;
+  max-width: $layout-content-max-width;
+}
+
+@mixin alignfull-margin-x() {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+@mixin alignfull-block() {
+  @include alignfull-margin-x();
+  max-width: 100vw;
+}
+
+@mixin alignfull-flex() {
+  @include alignfull-margin-x();
+  flex: 0 0 100vw;
 }
 
 @mixin active-menu-anchor() {

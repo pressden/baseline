@@ -1,8 +1,12 @@
+// LAYOUT
+
+// TODO: Replace all `-down` media queries with `-up` for consistency
+
 .content-sidebar-wrap {
   display: block;
   flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: $layout-max-width;
+
+  @include site-container();
 
   .content {
     flex: 5;

@@ -1,14 +1,26 @@
+// VARIABLES
+
 // Layout
 $layout-max-width:                1200px !default;
+$layout-content-max-width:        800px !default;
 $layout-breakpoint:               md !default;
+$layout-alignwide-margin-x:       -150px !default;
+$layout-alignwide-md-margin-x:    $layout-alignwide-margin-x / 1.5 !default;
+$layout-alignwide-lg-margin-x:    $layout-alignwide-margin-x * 1.25 !default;
 
 // Grid
 $grid-breakpoints: (
   xs: 0,
-  sm: 320px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1200px
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1920px
+) !default;
+
+// Containers
+$container-max-widths: (
+  md: 940px,
+  lg: $layout-max-width
 ) !default;
 
 // Colors
@@ -48,9 +60,6 @@ $h6-font-size:                    $font-size-base * 1.125 !default;
 
 $body-font-weight:                lighter !default;
 $headline-font-weight:            normal !default;
-
-// Alignment
-$align-wide-margin-x:             -150px !default;
 
 // Links
 $link-color:                      #00b9eb !default;

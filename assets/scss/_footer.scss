@@ -1,3 +1,5 @@
+// FOOTER
+
 .site-footer {
   padding: 2rem 0;
   background-color: $footer-background-color;
@@ -32,12 +34,13 @@
     }
   }
 
+  // TODO: Styles matching `.wp-block-columns` could be converted to @mixins
   .footer-widget-area {
     flex-basis: 100%;
 
     @include media-breakpoint-up($block-columns-breakpoint) {
-      margin-left: 1rem;  // default: 32px
-      margin-right: 1rem;  // default: 32px
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
 
     &:first-child {
@@ -53,31 +56,3 @@
     font-size: $h5-font-size;
   }
 }
-
-/*
-// WP Block Columns
-.wp-block-columns {
-
-  @include media-breakpoint-up($block-columns-breakpoint) {
-    flex-wrap: nowrap;
-  }
-
-  .wp-block-column {
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 2rem;
-    flex-basis: 100%;
-
-    @include media-breakpoint-up($block-columns-breakpoint) {
-      margin-left: 1rem;  // default: 32px
-      margin-right: 1rem;  // default: 32px
-    }
-
-    & > *:last-child {
-      margin-bottom: 0;
-    }
-
-  }
-
-}
-*/
