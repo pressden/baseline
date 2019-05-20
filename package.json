@@ -10,8 +10,8 @@
     "url": "https://github.com/pressden/baseline"
   },
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "build": "webpack --mode production",
+    "watch": "webpack --mode production --watch"
   },
   "devDependencies": {
     "css-loader": "^2.1.0",
