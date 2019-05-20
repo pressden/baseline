@@ -11,8 +11,8 @@ module.exports = {
     main: '../js/webpack.js'
   },
   output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, '../js/')
+    filename: 'js/[name].js',
+    path: path.resolve(__dirname, '../')
   },
   module: {
     rules: [
@@ -26,7 +26,7 @@ module.exports = {
               loader: 'sass-loader',
               options: {
                 includePaths: [
-                  "node_modules/bootstrap/scss",
+                  "node_modules/bootstrap/scss"
                 ]
               }
             }
@@ -58,7 +58,7 @@ module.exports = {
     }
   },
   plugins: [
-    new ExtractTextPlugin('../style.css'),
+    new ExtractTextPlugin('style.css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
