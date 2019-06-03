@@ -4,7 +4,9 @@
 .site-container {
   .alignfull,
   .alignwide {
-    @include alignfull-block();
+    @include media-breakpoint-up($layout-breakpoint) {
+      @include alignfull-block();
+    }
 
     img {
       width: 100% !important;

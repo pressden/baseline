@@ -13,6 +13,7 @@
   // TODO: Styles matching `.footer-widget-area` could be converted to @mixins
   .wp-block-columns {
     flex-wrap: wrap;
+    justify-content: space-between;
 
     @include media-breakpoint-up($block-columns-breakpoint) {
       flex-wrap: nowrap;
