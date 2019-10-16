@@ -26,6 +26,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "flexslider": "^2.7.2",
+    "popper.js": "^1.16.0",
     "url-loader": "^1.1.2"
   }
 }
